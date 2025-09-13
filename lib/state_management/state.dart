@@ -1,10 +1,57 @@
-abstract class PortFolioStates {}
+class PortFolioStates {
+  final bool? isLoadingResume;
+  final bool? isLiked;
+  final bool? resumeDownload;
+  final bool? isTappedAbout;
 
-class InitialState extends PortFolioStates {}
+  const PortFolioStates({
+    this.isLiked = false,
+    this.isLoadingResume = false,
+    this.resumeDownload = false,
+    this.isTappedAbout = false,
+  });
 
-class LoadingState extends PortFolioStates {}
+  factory PortFolioStates.initial() => const PortFolioStates();
 
-class ResumeDownloadedState extends PortFolioStates {
-  final bool data;
-  ResumeDownloadedState(this.data);
+  PortFolioStates copyWith({
+    bool? isLoadingResume,
+    bool? isLiked,
+    bool? resumeDownload,
+    bool? isTappedAbout,
+  }) {
+    return PortFolioStates(
+      isLoadingResume: isLoadingResume ?? this.isLoadingResume,
+      isLiked: isLiked ?? this.isLiked,
+      resumeDownload: resumeDownload ?? this.resumeDownload,
+      isTappedAbout: isTappedAbout ?? this.isTappedAbout,
+    );
+  }
 }
+
+// abstract class PortFolioStates {}
+
+// class InitialState extends PortFolioStates {}
+
+// class LoadingState extends PortFolioStates {}
+
+// class ResumeDownloadedState extends PortFolioStates {
+//   final bool data;
+//   ResumeDownloadedState(this.data);
+// }
+
+// class TapAboutInitialState extends PortFolioStates {
+//   final bool init;
+//   TapAboutInitialState(this.init);
+// }
+
+// class TappedOnAbout extends PortFolioStates {
+//   final bool isTapped;
+
+//   TappedOnAbout(this.isTapped);
+// }
+
+// class TappedLike extends PortFolioStates {
+//   final bool liked;
+
+//   TappedLike(this.liked);
+// }
