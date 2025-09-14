@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Screens/about_content.dart';
-import 'package:flutter_application_1/Screens/profile_banner.dart';
-import 'package:flutter_application_1/widgets/clip_image.dart';
+import 'package:flutter_application_1/Screens/profile_header.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -15,34 +13,13 @@ class _HomePage extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Stack(
-              children: [
-                ClipPath(
-                  clipper: UshapeClipper(),
-                  child: Container(
-                    height: 300,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        colorFilter: ColorFilter.mode(
-                          const Color.fromARGB(255, 89, 69, 108).withAlpha(150),
-                          BlendMode.srcOver,
-                        ),
-                        image: AssetImage("assets/images/bridge.jpg"),
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
-                ),
-
-                profileBanner(context),
-              ],
-            ),
-
-            SizedBox(height: 30),
-            aboutContent(context),
-          ],
+        child: Padding(
+          padding: EdgeInsets.symmetric(vertical: 24, horizontal: 16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            // mainAxisSize: MainAxisSize.min,
+            children: [ProfileHeader()],
+          ),
         ),
       ),
     );
