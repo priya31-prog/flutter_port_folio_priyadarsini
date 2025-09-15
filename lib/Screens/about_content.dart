@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/state_management/bloc_provider.dart';
 import 'package:flutter_application_1/state_management/events.dart';
 import 'package:flutter_application_1/state_management/state.dart';
-import 'package:flutter_application_1/widgets/download_resume_btn.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 Widget aboutContent(BuildContext context) {
@@ -48,27 +47,10 @@ Widget aboutContent(BuildContext context) {
                   builder: (context, state) {
                     if (state.isLoadingResume == false &&
                         state.resumeDownload == false) {
-                      return getDownloadButton(
-                        context: context,
-                        icon: Icons.download,
-                        text: 'Download Resume',
-                        // bloc: bloc,
-                      );
                     } else if (state.isLoadingResume == true) {
                       //change this to downloading with animation
                       return CircularProgressIndicator();
-                    } else if (state.resumeDownload == true) {
-                      return getDownloadButton(
-                        context: context,
-                        icon: state.resumeDownload == true
-                            ? Icons.download_done
-                            : Icons.download,
-                        text: state.resumeDownload == true
-                            ? 'Downloaded'
-                            : 'Download Resume',
-                        // bloc: bloc,
-                      );
-                    }
+                    } else if (state.resumeDownload == true) {}
                     return SizedBox();
                   },
                 ),
