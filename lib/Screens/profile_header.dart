@@ -18,7 +18,7 @@ class ProfileHeader extends StatelessWidget {
             children: [
               Text(
                 'Priyadarsini K',
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
               ),
               Text('Flutter Application Developer'),
               SizedBox(height: 15),
