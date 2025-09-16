@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screens/about_journey.dart';
 import 'package:flutter_application_1/Screens/profile_header.dart';
+import 'package:flutter_application_1/Screens/skills.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -20,7 +21,7 @@ class _HomePage extends State<HomePage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             spacing: 30,
             // mainAxisSize: MainAxisSize.min,
-            children: [ProfileHeader(), AboutJourney()],
+            children: [ProfileHeader(), AboutJourney(), SkillPage()],
           ),
         ),
       ),
