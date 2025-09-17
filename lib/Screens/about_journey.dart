@@ -24,14 +24,18 @@ class _AboutJourney extends State<AboutJourney> {
             bool isSmallScreen = constraints.maxWidth < 500;
             if (isSmallScreen) {
               return Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: EdgeInsets.symmetric(horizontal: 5),
                 child: Column(
-                  children: [timeLine(context), buildText(context)],
+                  children: [
+                    timeLine(context),
+                    SizedBox(height: 30),
+                    buildText(context),
+                  ],
                 ),
               );
             } else {
               return Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: EdgeInsets.symmetric(horizontal: 5),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -62,6 +66,8 @@ Widget buildText(BuildContext context) {
       'Tata Neu',
       'UI/UX',
       'Agile environments',
+      'seamless',
+      'user-friendly',
     ],
   );
   // return RichText(
