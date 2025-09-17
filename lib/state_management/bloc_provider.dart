@@ -22,6 +22,9 @@ class PortFolioBloc extends Bloc<PortFolioEvents, PortFolioStates> {
     on<TapLike>((event, emit) {
       emit(state.copyWith(isLiked: !(state.isLiked!)));
     });
+    on<SbiProjectTap>((event, emit) {
+      emit(state.copyWith(isSbiProjectTapped: !(state.isSbiProjectTapped!)));
+    });
   }
   @override
   void onChange(Change<PortFolioStates> change) {
