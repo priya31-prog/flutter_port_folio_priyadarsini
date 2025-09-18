@@ -4,6 +4,7 @@ Widget highlightedText({
   required BuildContext context,
   required String text,
   required List<String> boldWords,
+  TextStyle? textStyle,
 }) {
   final spans = <TextSpan>[];
 
@@ -25,7 +26,10 @@ Widget highlightedText({
   );
 
   return Text.rich(
-    TextSpan(style: Theme.of(context).textTheme.bodySmall, children: spans),
+    TextSpan(
+      style: textStyle ?? Theme.of(context).textTheme.bodySmall,
+      children: spans,
+    ),
     // textAlign: TextAlign.center,
   );
 }

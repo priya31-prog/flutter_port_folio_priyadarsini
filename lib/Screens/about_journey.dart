@@ -101,7 +101,7 @@ Widget timeLine(BuildContext context) {
     Icons.payment_outlined,
   ];
 
-  final List<String> year = ['2018-2022', '2022-2023 - TCS', 'Current - TCS'];
+  final List<String> year = ['2018-2022', '2022-2023', '2023-Present'];
 
   final List<String> title = [
     'Anna University',
