@@ -6,6 +6,10 @@ class TapAbout extends PortFolioEvents {}
 
 class TapLike extends PortFolioEvents {}
 
-class SbiProjectTap extends PortFolioEvents {}
+class SbiProjectTap extends PortFolioEvents {
+  // final String projectId;
+
+  // ProjectTap({required this.projectId});
+}
 
 class NeuProjectTap extends PortFolioEvents {}

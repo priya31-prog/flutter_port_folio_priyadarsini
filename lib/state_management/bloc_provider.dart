@@ -23,7 +23,12 @@ class PortFolioBloc extends Bloc<PortFolioEvents, PortFolioStates> {
       emit(state.copyWith(isLiked: !(state.isLiked!)));
     });
     on<SbiProjectTap>((event, emit) {
-      emit(state.copyWith(isSbiProjectTapped: !(state.isSbiProjectTapped!)));
+      // final isSame = state.isSbiProjectTapped == event.projectId;
+      emit(state.copyWith(isSbiProjectTapped: !state.isSbiProjectTapped!));
+    });
+
+    on<NeuProjectTap>((event, emit) {
+      emit(state.copyWith(isNeuProjectTapped: !(state.isNeuProjectTapped!)));
     });
   }
   @override
