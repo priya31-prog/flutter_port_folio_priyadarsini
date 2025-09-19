@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/common_utils.dart';
 import 'package:flutter_application_1/state_management/bloc_provider.dart';
 import 'package:flutter_application_1/state_management/events.dart';
 import 'package:flutter_application_1/state_management/state.dart';
@@ -40,45 +41,47 @@ class _ProjectWidget extends State<ProjectWidget> {
                         BlocBuilder<PortFolioBloc, PortFolioStates>(
                           builder: (context, state) {
                             isNeuExpanded = state.isNeuProjectTapped ?? false;
-                            return project(
-                              context: context,
-                              imageString: 'images/tata-neu.png',
-                              projectTitle:
-                                  'Tata Neu - Life style & Travel Super App\n',
-                              company: 'Tata Consultancy Services\n',
-                              position: 'Flutter Application Developer',
-                              isSbi: false,
-                              onTap: () {
-                                context.read<PortFolioBloc>().add(
-                                  NeuProjectTap(),
-                                );
-                              },
-                              childIcon: isNeuExpanded
-                                  ? Icon(Icons.arrow_upward)
-                                  : Icon(Icons.arrow_downward),
-                              isExpanded: isNeuExpanded,
+                            return Projects(
+                              projectParams: ProjectArgs(
+                                childIcon: isNeuExpanded
+                                    ? Icon(Icons.arrow_upward)
+                                    : Icon(Icons.arrow_downward),
+                                company: 'Tata Consultancy Services\n',
+                                imageString: 'images/tata-neu.png',
+                                isExpanded: isNeuExpanded,
+                                isSbi: false,
+                                onTap: () {
+                                  context.read<PortFolioBloc>().add(
+                                    NeuProjectTap(),
+                                  );
+                                },
+                                position: 'Flutter Application Developer',
+                                projectTitle:
+                                    'Tata Neu - Life style & Travel Super App\n',
+                              ),
                             );
                           },
                         ),
                         BlocBuilder<PortFolioBloc, PortFolioStates>(
                           builder: (context, state) {
                             isExpanded = state.isSbiProjectTapped ?? false;
-                            return project(
-                              context: context,
-                              imageString: 'images/yono_sbi.png',
-                              projectTitle: 'SBI YONO(UPI)\n',
-                              company: 'Tata Consultancy Services\n',
-                              position: 'Flutter Application Developer',
-                              isSbi: true,
-                              onTap: () {
-                                context.read<PortFolioBloc>().add(
-                                  SbiProjectTap(),
-                                );
-                              },
-                              childIcon: isExpanded
-                                  ? Icon(Icons.arrow_upward)
-                                  : Icon(Icons.arrow_downward),
-                              isExpanded: isExpanded,
+                            return Projects(
+                              projectParams: ProjectArgs(
+                                childIcon: isExpanded
+                                    ? Icon(Icons.arrow_upward)
+                                    : Icon(Icons.arrow_downward),
+                                company: 'Tata Consultancy Services\n',
+                                imageString: 'images/yono_sbi.png',
+                                isExpanded: isExpanded,
+                                isSbi: true,
+                                onTap: () {
+                                  context.read<PortFolioBloc>().add(
+                                    SbiProjectTap(),
+                                  );
+                                },
+                                position: 'Flutter Application Developer',
+                                projectTitle: 'SBI YONO(UPI)\n',
+                              ),
                             );
                           },
                         ),
@@ -91,23 +94,24 @@ class _ProjectWidget extends State<ProjectWidget> {
                           child: BlocBuilder<PortFolioBloc, PortFolioStates>(
                             builder: (context, state) {
                               isNeuExpanded = state.isNeuProjectTapped ?? false;
-                              return project(
-                                context: context,
-                                imageString: 'images/tata-neu.png',
-                                projectTitle:
-                                    'Tata Neu - Life style & Travel Super App\n',
-                                company: 'Tata Consultancy Services\n',
-                                position: 'Flutter Application Developer',
-                                isSbi: false,
-                                onTap: () {
-                                  context.read<PortFolioBloc>().add(
-                                    NeuProjectTap(),
-                                  );
-                                },
-                                childIcon: isNeuExpanded
-                                    ? Icon(Icons.arrow_upward)
-                                    : Icon(Icons.arrow_downward),
-                                isExpanded: isNeuExpanded,
+                              return Projects(
+                                projectParams: ProjectArgs(
+                                  childIcon: isNeuExpanded
+                                      ? Icon(Icons.arrow_upward)
+                                      : Icon(Icons.arrow_downward),
+                                  company: 'Tata Consultancy Services\n',
+                                  imageString: 'images/tata-neu.png',
+                                  isExpanded: isNeuExpanded,
+                                  isSbi: false,
+                                  onTap: () {
+                                    context.read<PortFolioBloc>().add(
+                                      NeuProjectTap(),
+                                    );
+                                  },
+                                  position: 'Flutter Application Developer',
+                                  projectTitle:
+                                      'Tata Neu - Life style & Travel Super App\n',
+                                ),
                               );
                             },
                           ),
@@ -117,22 +121,23 @@ class _ProjectWidget extends State<ProjectWidget> {
                           child: BlocBuilder<PortFolioBloc, PortFolioStates>(
                             builder: (context, state) {
                               isExpanded = state.isSbiProjectTapped ?? false;
-                              return project(
-                                context: context,
-                                imageString: 'images/yono_sbi.png',
-                                projectTitle: 'SBI YONO(UPI)\n',
-                                company: 'Tata Consultancy Services\n',
-                                position: 'Flutter Application Developer',
-                                isSbi: true,
-                                onTap: () {
-                                  context.read<PortFolioBloc>().add(
-                                    SbiProjectTap(),
-                                  );
-                                },
-                                childIcon: isExpanded
-                                    ? Icon(Icons.arrow_upward)
-                                    : Icon(Icons.arrow_downward),
-                                isExpanded: isExpanded,
+                              return Projects(
+                                projectParams: ProjectArgs(
+                                  childIcon: isExpanded
+                                      ? Icon(Icons.arrow_upward)
+                                      : Icon(Icons.arrow_downward),
+                                  company: 'Tata Consultancy Services\n',
+                                  imageString: 'images/yono_sbi.png',
+                                  isExpanded: isExpanded,
+                                  isSbi: true,
+                                  onTap: () {
+                                    context.read<PortFolioBloc>().add(
+                                      SbiProjectTap(),
+                                    );
+                                  },
+                                  position: 'Flutter Application Developer',
+                                  projectTitle: 'SBI YONO(UPI)\n',
+                                ),
                               );
                             },
                           ),
