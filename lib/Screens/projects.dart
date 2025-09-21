@@ -8,7 +8,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 // import 'package:flutter/widgets.dart';
 
 class ProjectWidget extends StatefulWidget {
-  const ProjectWidget({super.key});
+  final ProjectWidgetParams projectWidgetParams;
+  const ProjectWidget({super.key, required this.projectWidgetParams});
 
   @override
   State<ProjectWidget> createState() => _ProjectWidget();
@@ -26,7 +27,11 @@ class _ProjectWidget extends State<ProjectWidget> {
         children: [
           Text(
             'Projects',
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+            style:
+                widget.projectWidgetParams.pageNav ==
+                    ProjectPageNav.rePaintBoundary
+                ? TextStyle(fontWeight: FontWeight.bold, fontSize: 16)
+                : TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
           ),
           SizedBox(height: 20),
 
@@ -34,7 +39,9 @@ class _ProjectWidget extends State<ProjectWidget> {
             builder: (context, constraints) {
               final isSmallScreen = constraints.maxWidth < 600;
 
-              return isSmallScreen
+              return isSmallScreen &&
+                      widget.projectWidgetParams.pageNav !=
+                          ProjectPageNav.rePaintBoundary
                   ? Column(
                       spacing: 30,
                       children: [
@@ -58,6 +65,8 @@ class _ProjectWidget extends State<ProjectWidget> {
                                 position: 'Flutter Application Developer',
                                 projectTitle:
                                     'Tata Neu - Life style & Travel Super App\n',
+                                projectPageNav:
+                                    widget.projectWidgetParams.pageNav,
                               ),
                             );
                           },
@@ -81,6 +90,8 @@ class _ProjectWidget extends State<ProjectWidget> {
                                 },
                                 position: 'Flutter Application Developer',
                                 projectTitle: 'SBI YONO(UPI)\n',
+                                projectPageNav:
+                                    widget.projectWidgetParams.pageNav,
                               ),
                             );
                           },
@@ -88,7 +99,11 @@ class _ProjectWidget extends State<ProjectWidget> {
                       ],
                     )
                   : Row(
-                      spacing: 40,
+                      spacing:
+                          widget.projectWidgetParams.pageNav !=
+                              ProjectPageNav.rePaintBoundary
+                          ? 40
+                          : 20,
                       children: [
                         Expanded(
                           child: BlocBuilder<PortFolioBloc, PortFolioStates>(
@@ -111,6 +126,8 @@ class _ProjectWidget extends State<ProjectWidget> {
                                   position: 'Flutter Application Developer',
                                   projectTitle:
                                       'Tata Neu - Life style & Travel Super App\n',
+                                  projectPageNav:
+                                      widget.projectWidgetParams.pageNav,
                                 ),
                               );
                             },
@@ -137,6 +154,8 @@ class _ProjectWidget extends State<ProjectWidget> {
                                   },
                                   position: 'Flutter Application Developer',
                                   projectTitle: 'SBI YONO(UPI)\n',
+                                  projectPageNav:
+                                      widget.projectWidgetParams.pageNav,
                                 ),
                               );
                             },
