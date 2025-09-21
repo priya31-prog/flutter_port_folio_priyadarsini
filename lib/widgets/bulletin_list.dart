@@ -15,7 +15,7 @@ Widget listTiles({
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       Padding(
-        padding: EdgeInsetsGeometry.only(top: 5),
+        padding: EdgeInsetsGeometry.only(top: 4),
         child: isCompleted
             ? Icon(icon ?? Icons.circle, size: 8)
             : SizedBox.shrink(),
