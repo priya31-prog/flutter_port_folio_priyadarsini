@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -23,6 +24,7 @@ class ProjectArgs {
   final VoidCallback onTap;
   final Widget childIcon;
   final bool isExpanded;
+  final ProjectPageNav projectPageNav;
 
   ProjectArgs({
     required this.childIcon,
@@ -33,5 +35,16 @@ class ProjectArgs {
     required this.onTap,
     required this.position,
     required this.projectTitle,
+    required this.projectPageNav,
   });
 }
+
+class ProjectWidgetParams {
+  final ProjectPageNav pageNav;
+
+  ProjectWidgetParams({this.pageNav = ProjectPageNav.normal});
+}
+
+enum ProjectPageNav { rePaintBoundary, normal }
+
+final captureController = StreamController<void>.broadcast();
