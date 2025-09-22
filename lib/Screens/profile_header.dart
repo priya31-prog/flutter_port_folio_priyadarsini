@@ -1,4 +1,8 @@
+import 'dart:io';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/common_utils.dart';
 import 'package:flutter_application_1/widgets/get_resume_btn.dart';
 
 class ProfileHeader extends StatelessWidget {
@@ -62,6 +66,25 @@ class ProfileHeader extends StatelessWidget {
                       ),
                     ),
                   ),
+
+                  if (!kIsWeb)
+                    if (Platform.isAndroid)
+                      IconButton(
+                        onPressed: () {
+                          captureController.add(null);
+                        },
+                        icon: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Icon(
+                              Icons.share,
+                              color: Theme.of(context).colorScheme.primary,
+                            ),
+                            SizedBox(width: 10),
+                            Text('Share Profile'),
+                          ],
+                        ),
+                      ),
                 ],
               ),
             ],

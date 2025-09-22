@@ -31,7 +31,10 @@ class _ProjectWidget extends State<ProjectWidget> {
                 widget.projectWidgetParams.pageNav ==
                     ProjectPageNav.rePaintBoundary
                 ? TextStyle(fontWeight: FontWeight.bold, fontSize: 16)
-                : TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                : Theme.of(context).textTheme.headlineSmall!.copyWith(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
           ),
           SizedBox(height: 20),
 

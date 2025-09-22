@@ -16,7 +16,10 @@ class _AboutJourney extends State<AboutJourney> {
       children: [
         Text(
           'About Journey',
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+          style: Theme.of(context).textTheme.headlineSmall!.copyWith(
+            fontWeight: FontWeight.bold,
+            fontSize: 16,
+          ),
         ),
         SizedBox(height: 20),
         LayoutBuilder(

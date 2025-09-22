@@ -21,7 +21,10 @@ class _SkillPage extends State<SkillPage> {
           SizedBox(height: 20),
           Text(
             'Skills',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            style: Theme.of(context).textTheme.headlineSmall!.copyWith(
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
+            ),
           ),
           SizedBox(height: 20),
           skillGridView(
@@ -32,7 +35,10 @@ class _SkillPage extends State<SkillPage> {
           SizedBox(height: 20),
           Text(
             'State Management',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            style: Theme.of(context).textTheme.headlineSmall!.copyWith(
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
+            ),
           ),
           SizedBox(height: 20),
           skillGridView(
@@ -42,7 +48,10 @@ class _SkillPage extends State<SkillPage> {
           SizedBox(height: 20),
           Text(
             'Tools and PlatForms',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            style: Theme.of(context).textTheme.headlineSmall!.copyWith(
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
+            ),
           ),
           SizedBox(height: 20),
 
