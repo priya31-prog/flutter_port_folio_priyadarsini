@@ -70,6 +70,7 @@ flutter:
     - assets/images/tata-neu.png
     - assets/images/tcs_logo.jpg
     - assets/images/yono_sbi.png
+    - assets/images/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
