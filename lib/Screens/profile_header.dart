@@ -94,9 +94,9 @@ class ProfileHeader extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(
-                height: 100,
-                width: 150,
-                child: Image.asset('assets/images/bridge.jpg'),
+                height: 200,
+                width: 200,
+                child: Image.asset('images/flutter_dev.jpg'),
               ),
             ],
           ),
