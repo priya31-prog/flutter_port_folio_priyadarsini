@@ -1,43 +1,8 @@
-// import 'dart:nativewrappers/_internal/vm/lib/developer.dart';
-
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
-// import 'package:flutter/widgets.dart';
+import 'package:flutter_application_1/function_calls/contact_urls.dart';
 
 class ContactPage extends StatelessWidget {
   const ContactPage({super.key});
-
-  Future<void> _launchUrl({required String urlName}) async {
-    final Uri url = Uri.parse(urlName);
-    if (!await launchUrl(url)) {
-      log('Failed to launch url');
-    }
-  }
-
-  Future<void> _launchMail(String mail) async {
-    final Uri emailUri = Uri(
-      scheme: 'mailto',
-      path: 'priyadarsinik31@gmail.com',
-      query: 'Regarding recruitment',
-    );
-
-    if (await canLaunchUrl(emailUri)) {
-      await launchUrl(emailUri);
-    } else {
-      log('Error in launching email url');
-    }
-  }
-
-  Future<void> _launchDialer(String mobile) async {
-    final Uri phoneUrl = Uri(scheme: 'tel', path: mobile);
-    if (await canLaunchUrl(phoneUrl)) {
-      launchUrl(phoneUrl);
-    } else {
-      log('Error in launching url');
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -72,7 +37,7 @@ class ContactPage extends StatelessWidget {
                   SizedBox(width: 15),
                   TextButton(
                     onPressed: () {
-                      _launchMail('priyadarsinik31@gmail.com');
+                      ContactUrls().launchMail('priyadarsinik31@gmail.com');
                     },
                     child: Text(
                       'priyadarsinik31@gmail.com',
@@ -91,7 +56,7 @@ class ContactPage extends StatelessWidget {
                   SizedBox(width: 5),
                   InkWell(
                     onTap: () {
-                      _launchUrl(
+                      ContactUrls().launchWebUrl(
                         urlName:
                             'https://www.hackerrank.com/profile/priyadarsinik31',
                       );
@@ -104,7 +69,7 @@ class ContactPage extends StatelessWidget {
                   ),
                   InkWell(
                     onTap: () {
-                      _launchUrl(
+                      ContactUrls().launchWebUrl(
                         urlName:
                             'https://www.linkedin.com/in/priyadarsini-k-b74832213/',
                       );
@@ -117,7 +82,9 @@ class ContactPage extends StatelessWidget {
                   ),
                   InkWell(
                     onTap: () {
-                      _launchUrl(urlName: 'https://github.com/priya31-prog');
+                      ContactUrls().launchWebUrl(
+                        urlName: 'https://github.com/priya31-prog',
+                      );
                     },
                     child: SizedBox(
                       height: 20,
@@ -136,7 +103,7 @@ class ContactPage extends StatelessWidget {
                   SizedBox(width: 15),
                   TextButton(
                     onPressed: () {
-                      _launchDialer('+917708309962');
+                      ContactUrls().launchDialer('+917708309962');
                     },
                     child: Text('+91 7708309962'),
                   ),
