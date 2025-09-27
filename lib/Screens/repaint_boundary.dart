@@ -41,12 +41,15 @@ class _RepaintBoundaryState extends State<RepaintBoundaryPage> {
         format: ui.ImageByteFormat.png,
       );
       Uint8List pngBytes = byteData!.buffer.asUint8List();
-      log('Print platform ${kIsWeb}');
+      // log('Print platform ${kIsWeb}');
       // Save the image to a file
       if (Platform.isAndroid) {
         final directory = await getApplicationDocumentsDirectory();
         final file = File('${directory.path}/screenshot.png');
         await file.writeAsBytes(pngBytes);
+
+        if (!mounted) return;
+
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text('Screenshot saved to ${file.path}')),
         );
