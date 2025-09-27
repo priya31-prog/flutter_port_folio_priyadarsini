@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/widgets/high_light_text.dart';
-import 'package:flutter_application_1/widgets/typing_animation.dart';
+import 'package:port_folio/widgets/high_light_text.dart';
+import 'package:port_folio/widgets/typing_animation.dart';
 
 Widget listTiles({
   required BuildContext context,

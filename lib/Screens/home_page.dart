@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Screens/about_journey.dart';
-import 'package:flutter_application_1/Screens/contact_page.dart';
-import 'package:flutter_application_1/Screens/experience_page.dart';
-import 'package:flutter_application_1/Screens/profile_header.dart';
-import 'package:flutter_application_1/Screens/projects.dart';
-import 'package:flutter_application_1/Screens/skills.dart';
-import 'package:flutter_application_1/common_utils.dart';
+import 'package:port_folio/Screens/about_journey.dart';
+import 'package:port_folio/Screens/contact_page.dart';
+import 'package:port_folio/Screens/experience_page.dart';
+import 'package:port_folio/Screens/profile_header.dart';
+import 'package:port_folio/Screens/projects.dart';
+import 'package:port_folio/Screens/skills.dart';
+import 'package:port_folio/common_utils.dart';
 // import 'package:flutter_application_1/widgets/repaint_boundart.dart';
 
 class HomePage extends StatefulWidget {

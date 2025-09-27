@@ -2,8 +2,8 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/common_utils.dart';
-import 'package:flutter_application_1/widgets/get_resume_btn.dart';
+import 'package:port_folio/common_utils.dart';
+import 'package:port_folio/widgets/get_resume_btn.dart';
 
 class ProfileHeader extends StatelessWidget {
   const ProfileHeader({super.key});

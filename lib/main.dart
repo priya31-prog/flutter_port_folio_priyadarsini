@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_application_1/Screens/home_page.dart';
-import 'package:flutter_application_1/state_management/bloc_provider.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:port_folio/Screens/home_page.dart';
+import 'package:port_folio/state_management/bloc_provider.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

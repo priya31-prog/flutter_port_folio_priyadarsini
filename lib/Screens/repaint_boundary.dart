@@ -5,12 +5,12 @@ import 'dart:ui' as ui;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_application_1/Screens/projects.dart';
-import 'package:flutter_application_1/common_utils.dart';
-import 'package:flutter_application_1/widgets/high_light_text.dart';
-// import 'package:flutter_application_1/widgets/mobile_project_view.dart';
-import 'package:flutter_application_1/widgets/repaint_boundary_contact.dart';
+
 import 'package:path_provider/path_provider.dart';
+import 'package:port_folio/Screens/projects.dart';
+import 'package:port_folio/common_utils.dart';
+import 'package:port_folio/widgets/high_light_text.dart';
+import 'package:port_folio/widgets/repaint_boundary_contact.dart';
 import 'package:universal_html/html.dart' as html;
 
 class RepaintBoundaryPage extends StatefulWidget {

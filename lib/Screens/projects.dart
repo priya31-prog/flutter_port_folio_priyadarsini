@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/common_utils.dart';
-import 'package:flutter_application_1/state_management/bloc_provider.dart';
-import 'package:flutter_application_1/state_management/events.dart';
-import 'package:flutter_application_1/state_management/state.dart';
-import 'package:flutter_application_1/widgets/mobile_project_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:port_folio/common_utils.dart';
+import 'package:port_folio/state_management/bloc_provider.dart';
+import 'package:port_folio/state_management/events.dart';
+import 'package:port_folio/state_management/state.dart';
+import 'package:port_folio/widgets/mobile_project_view.dart';
 // import 'package:flutter/widgets.dart';
 
 class ProjectWidget extends StatefulWidget {

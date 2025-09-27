@@ -1,9 +1,9 @@
 import 'dart:developer';
-import 'package:flutter_application_1/function_calls/resume_download.dart';
-import 'package:flutter_application_1/common_utils.dart';
-import 'package:flutter_application_1/state_management/events.dart';
-import 'package:flutter_application_1/state_management/state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:port_folio/common_utils.dart';
+import 'package:port_folio/function_calls/resume_download.dart';
+import 'package:port_folio/state_management/events.dart';
+import 'package:port_folio/state_management/state.dart';
 
 class PortFolioBloc extends Bloc<PortFolioEvents, PortFolioStates> {
   PortFolioBloc() : super(PortFolioStates.initial()) {

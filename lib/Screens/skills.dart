@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/constants.dart';
-import 'package:flutter_application_1/widgets/skill_gridview.dart';
+import 'package:port_folio/constants.dart';
+import 'package:port_folio/widgets/skill_gridview.dart';
 
 class SkillPage extends StatefulWidget {
   const SkillPage({super.key});

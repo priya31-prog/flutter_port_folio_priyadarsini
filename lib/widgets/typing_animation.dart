@@ -1,7 +1,6 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/widgets/high_light_text.dart';
+import 'package:port_folio/widgets/high_light_text.dart';
 
 class TypingText extends StatefulWidget {
   final String text;

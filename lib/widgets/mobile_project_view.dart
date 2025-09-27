@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/common_utils.dart';
-import 'package:flutter_application_1/constants.dart';
-import 'package:flutter_application_1/widgets/bulletin_list.dart';
-import 'package:flutter_application_1/widgets/high_light_text.dart';
+import 'package:port_folio/common_utils.dart';
+import 'package:port_folio/constants.dart';
+import 'package:port_folio/widgets/bulletin_list.dart';
+import 'package:port_folio/widgets/high_light_text.dart';
 
 class Projects extends StatefulWidget {
   final ProjectArgs projectParams;
