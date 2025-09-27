@@ -6,24 +6,34 @@
 // tree, read text, and verify that the values of widget properties are correct.
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:port_folio/Screens/home_page.dart';
 import 'package:port_folio/main.dart';
+import 'package:port_folio/state_management/bloc_provider.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+  TestWidgetsFlutterBinding.ensureInitialized();
+
+  // Widget loadImage(String path, {double? width, double? height, BoxFit? fit}) {
+  //   return Image.asset(path, width: width, height: height, fit: fit);
+  // }
+
+  setUpAll(() {
+    // WidgetsFlutterBinding.ensureInitialized();
+  });
+  testWidgets('Portfolio sample test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(const MyApp());
 
     // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
-
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
-
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // expect(find.text('0'), findsOneWidget);
+    expect(find.byType(MaterialApp), findsOneWidget);
+    expect(find.byType(HomePage), findsOneWidget);
+    expect(find.byType(BlocProvider<PortFolioBloc>), findsOneWidget);
   });
+
+  // testWidgets('Home Page test',) async{
+
+  // }
 }

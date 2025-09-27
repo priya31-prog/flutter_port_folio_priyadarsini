@@ -64,7 +64,7 @@ class ContactPage extends StatelessWidget {
                     child: SizedBox(
                       height: 50,
                       width: 30,
-                      child: Image.asset('images/hacker_rank_logo.png'),
+                      child: Image.asset('assets/images/hacker_rank_logo.png'),
                     ),
                   ),
                   InkWell(
@@ -77,7 +77,7 @@ class ContactPage extends StatelessWidget {
                     child: SizedBox(
                       height: 30,
                       width: 30,
-                      child: Image.asset('images/linked_in_logo.png'),
+                      child: Image.asset('assets/images/linked_in_logo.png'),
                     ),
                   ),
                   InkWell(
@@ -89,7 +89,7 @@ class ContactPage extends StatelessWidget {
                     child: SizedBox(
                       height: 20,
                       width: 30,
-                      child: Image.asset('images/git_hub_logo.jpg'),
+                      child: Image.asset('assets/images/git_hub_logo.jpg'),
                     ),
                   ),
                 ],

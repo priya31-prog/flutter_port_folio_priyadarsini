@@ -57,7 +57,7 @@ class _ProjectWidget extends State<ProjectWidget> {
                                     ? Icon(Icons.arrow_upward)
                                     : Icon(Icons.arrow_downward),
                                 company: 'Tata Consultancy Services\n',
-                                imageString: 'images/tata-neu.png',
+                                imageString: 'assets/images/tata-neu.png',
                                 isExpanded: isNeuExpanded,
                                 isSbi: false,
                                 onTap: () {
@@ -83,7 +83,7 @@ class _ProjectWidget extends State<ProjectWidget> {
                                     ? Icon(Icons.arrow_upward)
                                     : Icon(Icons.arrow_downward),
                                 company: 'Tata Consultancy Services\n',
-                                imageString: 'images/yono_sbi.png',
+                                imageString: 'assets/images/yono_sbi.png',
                                 isExpanded: isExpanded,
                                 isSbi: true,
                                 onTap: () {
@@ -118,7 +118,7 @@ class _ProjectWidget extends State<ProjectWidget> {
                                       ? Icon(Icons.arrow_upward)
                                       : Icon(Icons.arrow_downward),
                                   company: 'Tata Consultancy Services\n',
-                                  imageString: 'images/tata-neu.png',
+                                  imageString: 'assets/images/tata-neu.png',
                                   isExpanded: isNeuExpanded,
                                   isSbi: false,
                                   onTap: () {
@@ -147,7 +147,7 @@ class _ProjectWidget extends State<ProjectWidget> {
                                       ? Icon(Icons.arrow_upward)
                                       : Icon(Icons.arrow_downward),
                                   company: 'Tata Consultancy Services\n',
-                                  imageString: 'images/yono_sbi.png',
+                                  imageString: 'assets/images/yono_sbi.png',
                                   isExpanded: isExpanded,
                                   isSbi: true,
                                   onTap: () {

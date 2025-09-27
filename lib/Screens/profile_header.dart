@@ -96,7 +96,7 @@ class ProfileHeader extends StatelessWidget {
               SizedBox(
                 height: 200,
                 width: 200,
-                child: Image.asset('images/flutter_dev.jpg'),
+                child: Image.asset('assets/images/flutter_dev.jpg'),
               ),
             ],
           ),

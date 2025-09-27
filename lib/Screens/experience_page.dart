@@ -29,7 +29,7 @@ class ExperiencePage extends StatelessWidget {
                   SizedBox(
                     height: 80,
                     width: 60,
-                    child: Image.asset('images/tcs_logo.jpg'),
+                    child: Image.asset('assets/images/tcs_logo.jpg'),
                   ),
                   SizedBox(width: 20),
 
