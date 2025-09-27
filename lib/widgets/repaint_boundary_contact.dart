@@ -10,6 +10,7 @@ class RepaintContact extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          //space
           SizedBox(height: 10),
           Text(
             'Contact',
