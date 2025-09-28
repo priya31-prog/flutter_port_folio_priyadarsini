@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:port_folio/Screens/about_journey.dart';
 import 'package:port_folio/Screens/contact_page.dart';
@@ -16,6 +18,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePage extends State<HomePage> {
+  final GlobalKey _contactPage = GlobalKey();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,12 +31,27 @@ class _HomePage extends State<HomePage> {
               spacing: 30,
               // mainAxisSize: MainAxisSize.min,
               children: [
-                ProfileHeader(),
+                ProfileHeader(
+                  getScrollable: () {
+                    final cxt = _contactPage.currentContext;
+                    log('Printing inside contact me getscrollable - $cxt');
+                    if (cxt != null) {
+                      log('Printing inside contact me if statement - $cxt');
+                      Scrollable.ensureVisible(
+                        cxt,
+                        duration: Duration(milliseconds: 300),
+                        curve: Curves.easeInOut,
+                      );
+                    } else {
+                      log('Printing inside contact me else - $cxt');
+                    }
+                  },
+                ),
                 AboutJourney(),
                 SkillPage(),
                 ProjectWidget(projectWidgetParams: ProjectWidgetParams()),
                 ExperiencePage(),
-                ContactPage(),
+                ContactPage(key: _contactPage),
                 // RepaintBoundaryPage(),
               ],
             ),

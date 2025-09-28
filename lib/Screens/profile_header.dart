@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'dart:io';
 
 import 'package:flutter/foundation.dart';
@@ -6,7 +7,8 @@ import 'package:port_folio/common_utils.dart';
 import 'package:port_folio/widgets/get_resume_btn.dart';
 
 class ProfileHeader extends StatelessWidget {
-  const ProfileHeader({super.key});
+  final VoidCallback getScrollable;
+  const ProfileHeader({super.key, required this.getScrollable});
 
   @override
   Widget build(BuildContext context) {
@@ -48,21 +50,27 @@ class ProfileHeader extends StatelessWidget {
                 runSpacing: 15,
                 children: [
                   getDownloadButton(context),
-                  Container(
-                    padding: EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Theme.of(context).colorScheme.primary,
-                      ),
-                      borderRadius: BorderRadius.circular(5),
+                  InkWell(
+                    onTap: () {
+                      log('Printing inside contact me inkwell');
+                      getScrollable();
+                    },
+                    child: Container(
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Theme.of(context).colorScheme.primary,
+                        ),
+                        borderRadius: BorderRadius.circular(5),
 
-                      shape: BoxShape.rectangle,
-                    ),
-                    child: Text(
-                      'Contact Me',
-                      style: TextStyle(
-                        fontSize: 12,
-                        // color: Colors.white,
+                        shape: BoxShape.rectangle,
+                      ),
+                      child: Text(
+                        'Contact Me',
+                        style: TextStyle(
+                          fontSize: 12,
+                          // color: Colors.white,
+                        ),
                       ),
                     ),
                   ),
