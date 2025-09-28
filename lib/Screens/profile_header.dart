@@ -32,6 +32,7 @@ class ProfileHeader extends StatelessWidget {
                   children: [
                     TextSpan(
                       text: 'Building seamless mobile journeys with Flutter',
+                      style: TextStyle(color: Colors.black),
                     ),
                     WidgetSpan(child: SizedBox(width: 5)),
 
@@ -99,7 +100,7 @@ class ProfileHeader extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(
-                height: 200,
+                height: 160,
                 width: 200,
                 child: Image.asset('assets/images/flutter_dev.jpg'),
               ),

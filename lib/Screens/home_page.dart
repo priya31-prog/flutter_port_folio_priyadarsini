@@ -22,7 +22,7 @@ class _HomePage extends State<HomePage> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.symmetric(vertical: 24, horizontal: 16),
+            padding: EdgeInsets.symmetric(vertical: 2, horizontal: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               spacing: 30,
