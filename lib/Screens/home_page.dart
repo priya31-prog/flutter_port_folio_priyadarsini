@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:port_folio/Screens/about_journey.dart';
 import 'package:port_folio/Screens/contact_page.dart';
@@ -8,7 +6,6 @@ import 'package:port_folio/Screens/profile_header.dart';
 import 'package:port_folio/Screens/projects.dart';
 import 'package:port_folio/Screens/skills.dart';
 import 'package:port_folio/common_utils.dart';
-// import 'package:flutter_application_1/widgets/repaint_boundart.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -34,16 +31,12 @@ class _HomePage extends State<HomePage> {
                 ProfileHeader(
                   getScrollable: () {
                     final cxt = _contactPage.currentContext;
-                    log('Printing inside contact me getscrollable - $cxt');
                     if (cxt != null) {
-                      log('Printing inside contact me if statement - $cxt');
                       Scrollable.ensureVisible(
                         cxt,
                         duration: Duration(milliseconds: 300),
                         curve: Curves.easeInOut,
                       );
-                    } else {
-                      log('Printing inside contact me else - $cxt');
                     }
                   },
                 ),

@@ -1,4 +1,4 @@
-import 'dart:developer';
+// import 'dart:developer';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:port_folio/common_utils.dart';
 import 'package:port_folio/function_calls/resume_download.dart';
@@ -34,6 +34,6 @@ class PortFolioBloc extends Bloc<PortFolioEvents, PortFolioStates> {
   @override
   void onChange(Change<PortFolioStates> change) {
     super.onChange(change);
-    log("PortfolioBloc onChange: $change");
+    // log("PortfolioBloc onChange: $change");
   }
 }

@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'dart:io';
 import 'dart:ui' as ui;
 
@@ -41,7 +40,6 @@ class _RepaintBoundaryState extends State<RepaintBoundaryPage> {
         format: ui.ImageByteFormat.png,
       );
       Uint8List pngBytes = byteData!.buffer.asUint8List();
-      // log('Print platform ${kIsWeb}');
       // Save the image to a file
       if (Platform.isAndroid) {
         final directory = await getApplicationDocumentsDirectory();
@@ -54,9 +52,8 @@ class _RepaintBoundaryState extends State<RepaintBoundaryPage> {
           SnackBar(content: Text('Screenshot saved to ${file.path}')),
         );
       }
-    } catch (e) {
-      log('Error -----$e');
-    }
+      // ignore: empty_catches
+    } catch (e) {}
   }
 
   Future<void> downloadImageWeb(Uint8List pngBytes, String fileName) async {

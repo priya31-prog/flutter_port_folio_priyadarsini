@@ -1,13 +1,9 @@
-import 'dart:developer';
-
 import 'package:url_launcher/url_launcher.dart';
 
 class ContactUrls {
   Future<void> launchWebUrl({required String urlName}) async {
     final Uri url = Uri.parse(urlName);
-    if (!await launchUrl(url)) {
-      log('Failed to launch url');
-    }
+    if (!await launchUrl(url)) {}
   }
 
   Future<void> launchMail(String mail) async {
@@ -19,8 +15,6 @@ class ContactUrls {
 
     if (await canLaunchUrl(emailUri)) {
       await launchUrl(emailUri);
-    } else {
-      log('Error in launching email url');
     }
   }
 
@@ -28,8 +22,6 @@ class ContactUrls {
     final Uri phoneUrl = Uri(scheme: 'tel', path: mobile);
     if (await canLaunchUrl(phoneUrl)) {
       launchUrl(phoneUrl);
-    } else {
-      log('Error in launching url');
     }
   }
 }
