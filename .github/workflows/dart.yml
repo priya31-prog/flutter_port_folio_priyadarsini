@@ -8,7 +8,9 @@ name: portfolio builds
 on:
   push:
     tags: 'v*'
-
+permissions:
+  contents: write
+  
 jobs:
   build-portfolio:
     runs-on: ubuntu-latest
